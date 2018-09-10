@@ -1,0 +1,9 @@
+{
+    "/js/jsdepends/jquery.js": "/js/jsdepends/jquery.js",
+    "/css/style.css": "/css/style.css",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/css/bpb.css": "/css/bpb.css",
+    "/js/jsdepends/musicajax.js": "/js/jsdepends/musicajax.js",
+    "/js/jsdepends/jsbundler.js": "/js/jsdepends/jsbundler.js",
+    "/js/jsdepends/galleryajax.js": "/js/jsdepends/galleryajax.js"
+}
