@@ -1,5 +1,12 @@
 @extends('layouts.ui')
+@section('xcss')
+<style>
 
+    footer {
+        display: none;
+    }
+    </style>
+@endsection
 @section('content')
 <div class="container" style="
     position:  absolute;

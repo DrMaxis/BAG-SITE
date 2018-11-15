@@ -1,62 +1,32 @@
-@extends('layouts.landingUI')
-
-@section('content')
-
-
-
-
-             
-                    
-                    <div class="container">
-                     <div class="container">
-                  <a href="https://soundcloud.com/notbrownpaperbag/sets/the-bag-tape"><img class="filter" id="landingImage" src="{{asset('storage/images/postimages/bagtape.jpg')}}"></a>
-              </div>
-
-
-              <br><br>
-                    <div class="mediaContainer ">
-                  
-             
-              
-                      <div class="containera">
-                  @if(count($medialinks) > 0 )
-                  @foreach($medialinks ->slice(7, 1) as  $link)
-
-                  <div id="videoholder">
-                 <iframe width="100%" height="100%" src="{{$link->source}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-                  </div>
-
-                  
-
-@endforeach
-            @else <p> No Videos can be found.</p>
-        @endif
-
-        
-
-              </div>
-
-              <br><br>
-
- 
-                  @foreach($medialinks ->slice(8, 1) as  $link)
-
-                  <div id="videoholder">
-                 <iframe width="100%" height="100%" src="{{$link->source}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-                  </div>
-                  @endforeach
-
-  
-              </div>
-            </div>
-          
-            
-                  </section>
-              
-                
+@extends('layouts.landingUI') 
+@section('content') @if(count($frontPagePosts) > 0 ) @foreach($frontPagePosts -> slice(0,2) as $post)
+<div class="container" style="margin-top:30px; padding-right:0px;">
+  <div class="row">
+    <!-- Section Title Start -->
+    <div class="col-xs-12" style="margin: 0 auto;">
+      <div class="section-title text-center mb-40">
+        <h3 class="section-info">{{$post->title}}</h3>
+      </div>
+    </div>
+    <!-- Section Title End -->
+  </div>
+  @if($post->youtube != null)
+  <iframe width="100%" height="100%" src="{{$post->youtube}}" class="screen" frameborder="0" allow="autoplay; encrypted-media"
+    allowfullscreen></iframe> @else
+  <a href="{{$post->source}}"><img  style="max-width: 1200px;max-height: 800px;"src="{{sourceImage($post->image)}}"></a>  @endif
+</div>
+@endforeach @endif
 
 
-                  <svg>
+
+
+
+
+
+
+
+
+<svg style="display:contents;">
                       <filter id="glitch">
                         <feColorMatrix in="SourceGraphic" type="matrix" values="1   0   0   0   0
                                   0   0   0   0   0
@@ -87,8 +57,4 @@
                       </feGaussianBlur>
                       </filter>
                     </svg>
-
-              @endsection
-    
-
-
+@endsection
