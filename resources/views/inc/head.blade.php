@@ -5,14 +5,11 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/bpb.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <!--/-/-/-/-/-/-/-/-/ 
-    Default-UI  
--/-/-/-/-/-/-/-/-/-->
-<link rel="stylesheet" href="{{asset('css/default.css')}}">
-<link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/default.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
 
 
-    
+
 
     <title>{{config('app.name', 'bpb')}}</title>
 
