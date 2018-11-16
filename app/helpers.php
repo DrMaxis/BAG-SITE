@@ -11,5 +11,5 @@ function presentDate($date)
 
 
 function sourceImage($path) {
-    return  $path != null && file_exists('storage/'.$path) ? asset('storage/'.$path) :  asset('storage/assets/imgs/no-img.jpg');
+    return  file_exists('storage/public/'.$path) ? asset('storage/public/'.$path) :  asset('storage/assets/imgs/no-img.jpg');
     }

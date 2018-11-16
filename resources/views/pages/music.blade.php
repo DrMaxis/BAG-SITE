@@ -1,4 +1,12 @@
 @extends('layouts.ui')
+@section('xcss')
+<style>
+
+.bodybg {
+  opacity:1;
+}
+  </style>
+@endsection
 @section('content')
 
         <section class="music-posts section infinite" data-next-page="{{$posts->nextPageUrl()}}">
@@ -9,7 +17,7 @@
                             <div class="col-md-4 col-sm-6">
                             <div class="single-blog">
                                 <div class="blog-img">
-                                    <a href="{{$post->sourcelink}}"><img src="{{asset("storage/images/postimages/$post->postimage")}}" alt="blog-image"></a>
+                                    <a href="{{$post->sourcelink}}"><img src="{{asset("storage/public/images/postimages/$post->postimage")}}" alt="blog-image"></a>
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-content-upper">

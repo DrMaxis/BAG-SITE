@@ -11,7 +11,11 @@
             display:none;
         }
     }
+    <style>
 
+.bodybg {
+  opacity:1;
+}
     </style>
 
 @endsection
@@ -19,7 +23,7 @@
 
 
 <div class="mainContainer">
-    <img class="overlay" src="{{asset('storage/images/postimages/tv.png')}}">
+    <img class="overlay" src="{{asset('storage/public/images/postimages/tv.png')}}">
     <div class="container2">
 
     </div>
@@ -32,7 +36,7 @@
     <div class="video-thumbs">
         @if(count($medialinks) > 0) @foreach($medialinks as $media)
         <div class="vidImage" vid-data-id="{{$media->id}}" vid-data-source="{{$media->source}}">
-            <a><img src="storage/images/thumbnails/{{$media->thumbnail}}"/></a>
+            <a><img src="storage/public/images/thumbnails/{{$media->thumbnail}}"/></a>
 
         </div>
         @endforeach @else

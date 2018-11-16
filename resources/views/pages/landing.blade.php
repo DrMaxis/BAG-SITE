@@ -1,4 +1,12 @@
 @extends('layouts.landingUI') 
+@section('xcss')
+<style>
+
+.bodybg {
+  opacity:1;
+}
+  </style>
+@endsection
 @section('content') @if(count($frontPagePosts) > 0 ) @foreach($frontPagePosts -> slice(0,2) as $post)
 <div class="container" style="margin-top:30px; padding-right:0px;">
   <div class="row">

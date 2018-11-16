@@ -18,9 +18,9 @@ body {
 }
 
 .bodybg {
-  background-image: url("/storage/images/postimages/paperbgg.jpg");
+  background-image: url("/storage/public/images/postimages/paperbgg.jpg");
   background-size: 100%;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   position: absolute;
   top: 0;
   bottom: 0;

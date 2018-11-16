@@ -7,11 +7,7 @@
 <html lang="{{ app()->getLocale() }}">
 
     @include('inc.head')
-    <body>
-
-      <div class="bodybg">
-
-      </div>
+    <body class="bodybg">
       @include('inc.navbar')
           
 

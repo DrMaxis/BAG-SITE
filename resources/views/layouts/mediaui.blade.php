@@ -8,7 +8,7 @@
 
     @include('inc.head')
 
-<body>
+<body class="bodybg">
   @include('inc.navbar')
   <section>
     <section class="xbox expand">

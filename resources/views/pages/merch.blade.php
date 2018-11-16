@@ -5,7 +5,14 @@
     footer {
         display: none;
     }
+    .bodybg {
+              opacity:1;
+            }
+    
     </style>
+    
+
+            
 @endsection
 @section('content')
 <div class="container" style="

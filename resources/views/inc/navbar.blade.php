@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-default navbar-expand-lg navbar-light">
     <div class="navbar-header d-flex col">
-      <a class="navbar-brand" href="{{route('landing')}}"><img src="{{asset('storage/images/postimages/bag561.png')}}">BrownPaperBag</a>
+      <a class="navbar-brand" href="{{route('landing')}}"><img src="{{asset('storage/public/images/postimages/bag561.png')}}">BrownPaperBag</a>
       <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
                 <span class="navbar-toggler-icon"></span>
                 <span class="icon-bar"></span>
