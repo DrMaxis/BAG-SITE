@@ -50,7 +50,7 @@
 
         }
         .tvc {
-            padding:0px 0px 100px 0px;
+            padding: 0px 0px 100px 0px;
         }
     }
 
@@ -62,6 +62,15 @@
         left: 30%;
         margin-bottom: 50px;
     }
+
+    .mainContainer {
+        height: 45%;
+        background-repeat: no-repeat;
+        position: relative;
+        left: 30%;
+        margin-bottom: 200px;
+    }
+
 
     img.overlay {
         max-width: 650px !important;
@@ -101,13 +110,16 @@
         .tvc {
             display: none;
         }
+        .lv-show {
+            display: none;
+        }
     }
 
-    
-.bodybg {
-  opacity:1;
-}
 
+
+    .bodybg {
+        opacity: 1;
+    }
 </style>
 @endsection
  
@@ -142,6 +154,7 @@
                                 <div class="blog-content-upper">
                                     <h6 class="blog-title"><a href="{{$article->sourcelink}}">{{$article->title}}</a></h6>
                                     <p>{!!$article->description!!}</p>
+                                    <p>By: <span>{!!$article->author!!}</span> </p>
                                 </div>
                                 <div class="blog-content-lower">
                                     <ul class="blog-lower-social">
@@ -177,7 +190,11 @@
 
 
 </section>
-
+<div class="col-xs-12" style="margin: 0 auto;">
+    <div class="section-title text-center mb-40 lv-show">
+        <h3 class="section-info">LATEST VIDEOS</h3>
+    </div>
+</div>
 <div class="tvc ptb-100">
 
     <div class="mainContainer">
@@ -259,6 +276,7 @@
     <!-- Container End -->
 </div>
 <!-- Latest Blog End -->
+
 
 
 

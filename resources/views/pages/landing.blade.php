@@ -1,12 +1,27 @@
 @extends('layouts.landingUI') 
 @section('xcss')
 <style>
+  .bodybg {
+    opacity: 1;
+  }
 
-.bodybg {
-  opacity:1;
-}
-  </style>
+  @media only screen and (width:320px) {
+    .section-info.pt-50 {
+
+      margin-top: 50px;
+    }
+
+    footer {
+      display:none;
+    }
+    #l2p {
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }
+</style>
 @endsection
+ 
 @section('content') @if(count($frontPagePosts) > 0 ) @foreach($frontPagePosts -> slice(0,2) as $post)
 <div class="container" style="margin-top:30px; padding-right:0px;">
   <div class="row">
@@ -21,7 +36,7 @@
   @if($post->youtube != null)
   <iframe width="100%" height="100%" src="{{$post->youtube}}" class="screen" frameborder="0" allow="autoplay; encrypted-media"
     allowfullscreen></iframe> @else
-  <a href="{{$post->source}}"><img  style="max-width: 1200px;max-height: 800px;"src="{{sourceImage($post->image)}}"></a>  @endif
+  <a href="{{$post->source}}"><img id="l2p" src="{{sourceImage($post->image)}}"></a>  @endif
 </div>
 @endforeach @endif
 

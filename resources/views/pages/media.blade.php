@@ -1,24 +1,41 @@
-@extends('layouts.mediaui')
+@extends('layouts.mediaui') 
 @section('xcss')
 <style>
-
     @media only screen and (max-width:414px) {
         footer {
-            display:none;
+            display: none;
         }
     }
+
     footer {
-            display:none;
-        }
+        display: none;
     }
-    <style>
 
-.bodybg {
-  opacity:1;
-}
-    </style>
+    }
 
+    <style>.bodybg {
+        opacity: 1;
+    }
+
+
+    @media only screen and (width:320px) {
+
+        .mainContainer {
+
+            width: 91%;
+            height: 39.5%;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0px;
+            left: 6%;
+
+        }
+
+
+    }
+</style>
 @endsection
+ 
 @section('content')
 
 
@@ -52,6 +69,7 @@
     var imageWidth = 300;
                    
                 $(".video-thumbs").width($(".vidImage").length*imageWidth);
+
 </script>
 
 
@@ -72,5 +90,6 @@
                 })
             })
              })();
+
 </script>
 @endsection
