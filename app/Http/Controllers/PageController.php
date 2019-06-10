@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Image;
-use App\Media;
 use App\News;
 use App\Post;
+use App\Image;
+use App\Media;
 
+use App\LatestNews;
+use App\FrontPagePost;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -42,7 +44,8 @@ class PageController extends Controller
         $posts = Post::inRandomOrder()->get();
         $galleryimages = Image::inRandomOrder()->get();
         $medialinks = Media::orderBy('id', 'desc')->get();
-        $data = array('posts' => $posts,'galleryimages'=> $galleryimages, 'medialinks' => $medialinks);
+        $frontPagePosts = FrontPagePost::orderBy('id', 'asc')->get();
+        $data = array('posts' => $posts,'galleryimages'=> $galleryimages, 'medialinks' => $medialinks, 'frontPagePosts' => $frontPagePosts);
          return view('pages.landing')->with($data);
       
     }
@@ -81,17 +84,15 @@ return view('pages.music')->with(compact('posts'))->render();
          */
 
 
-    public function news(Request $request){
-        $news = News::orderBy('created_at','desc')->paginate($this->posts_per_page);
-        
-
-        if($request->ajax()) {
-            return [
-                'next_page' => $news->nextPageUrl(),
-                'posts' => view('inc.newsajax')->with('news', $news)->render()
-            ];
-        }
-        return view('pages.news')->with(compact('news'))->render();
+    public function news(Request $request) {
+        $medialinks = Media::all();
+        $posts =  Post::orderBy('id', 'desc')->get();
+        $news = LatestNews::orderBy('id', 'desc')->get();
+        return view('pages.news')->with([
+            'medialinks' => $medialinks,
+            'posts' => $posts,
+            'news' => $news,
+            ]);
 
 
     }

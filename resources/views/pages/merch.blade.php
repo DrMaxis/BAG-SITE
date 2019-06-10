@@ -1,5 +1,19 @@
 @extends('layouts.ui')
+@section('xcss')
+<style>
 
+    footer {
+        display: none;
+    }
+    .bodybg {
+              opacity:1;
+            }
+    
+    </style>
+    
+
+            
+@endsection
 @section('content')
 <div class="container" style="
     position:  absolute;

@@ -3,7 +3,11 @@
     "/css/style.css": "/css/style.css",
     "/css/bootstrap.min.css": "/css/bootstrap.min.css",
     "/css/bpb.css": "/css/bpb.css",
+    "/css/default.css": "/css/default.css",
+    "/css/owl.carousel.min.css": "/css/owl.carousel.min.css",
+    "/js/jsdepends/owl.carousel.min.js": "/js/jsdepends/owl.carousel.min.js",
     "/js/jsdepends/musicajax.js": "/js/jsdepends/musicajax.js",
     "/js/jsdepends/jsbundler.js": "/js/jsdepends/jsbundler.js",
+    "/js/jsdepends/init.js": "/js/jsdepends/init.js",
     "/js/jsdepends/galleryajax.js": "/js/jsdepends/galleryajax.js"
 }

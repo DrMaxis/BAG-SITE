@@ -20,3 +20,8 @@ Route::get('/about', 'PageController@about')->name('about');
 Route::get('/media', 'PageController@media')->name('media');
 Route::get('/merch', 'PageController@merch')->name('merch');
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
